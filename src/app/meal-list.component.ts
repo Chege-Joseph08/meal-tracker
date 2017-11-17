@@ -8,8 +8,8 @@ import { CaloriesPipe } from './calories.pipe';
 @Component({
   selector: 'meal-list',
   inputs: ['mealList'],
-  //directives: [MealComponent, EditMealDetailsComponent, NewMealComponent],
-  //pipes: [CaloriesPipe],
+  directives: [MealComponent, EditMealDetailsComponent, NewMealComponent],
+  pipes: [CaloriesPipe],
   template: `
     <div class="form">
       <div class="form-fields">

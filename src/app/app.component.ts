@@ -4,7 +4,7 @@ import { MealListComponent } from './meal-list.component';
 
 @Component({
   selector: 'my-app',
-  //directives: [MealListComponent],
+  directives: [MealListComponent],
   template: `
     <div class="container">
       <h1>Meal Tracker</h1>
