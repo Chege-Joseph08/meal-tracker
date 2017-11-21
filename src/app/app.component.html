@@ -1,19 +1,33 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{title}}!
-  </h1>
-  <img width="300" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+<div class="container">
+<header class="jumbotron">
+  <h1>{{title}}</h1>
+</header>
+<main>
+  <div class="about">
+    <p>Sherrif Meal Tracker Is An Web App Where Customers Can Log Meals They’ve Taken, Including Details About The Meal And Its Number Of Calories.</p>
+    <p>The user can: </p>
+    <ol>
+      <li>Log details of a meal (i.e number of meal, name, calories and details).</li>
+      <li>View and edit list of foods logged</li>
+      <li>Filter food for amount of calories (i.e whether calorie count is below or above 500)</li>
+    </ol>
+  </div>
+  <div class="row">
+    <div class="column left">
+      <app-new-food
+        (newFoodSender)="addFood($event)"
+      ></app-new-food>
+    </div>
+    <div class="column right">
+      <app-food-list
+      [childFoodList]="masterFoodList"
+      (clickSender)="showDetails($event)"
+      ></app-food-list>
+      <app-edit-food
+        [childSelectedFood]="selectedFood"
+        (doneClickedSender)="finishedEditing()"
+      ></app-edit-food>
+    </div>
+  </div>
+</main>
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>

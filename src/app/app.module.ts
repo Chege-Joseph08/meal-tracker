@@ -1,16 +1,28 @@
-import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { AppComponent }   from './app.component';
-import { MealListComponent } from './meal-list.component'
-import { newMealComponent } from './new-meal.component'
-import { EditMealComponent } from './edit-meal.component'
+import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { CalorificPipe} from './calorific.pipe'
+
+
+import { AppComponent } from './app.component';
+import { FoodListComponent } from './food-list/food-list.component';
+import { EditFoodComponent } from './edit-food/edit-food.component';
+import { NewFoodComponent } from './new-food/new-food.component';
+import { CaloriesPipe } from './calories.pipe';
+
 
 @NgModule({
-  imports: [BrowserModule, FormsModule],
-  declarations: [ AppComponent, MealListComponent, newMealComponent, EditMealComponent, CalorificPipe ],
-  bootstrap:    [ AppComponent ]
+  declarations: [
+    AppComponent,
+    FoodListComponent,
+    EditFoodComponent,
+    NewFoodComponent,
+    CaloriesPipe
+  ],
+  imports: [
+    BrowserModule,
+    FormsModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
 })
-
 export class AppModule { }

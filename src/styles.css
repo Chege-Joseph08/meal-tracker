@@ -1,82 +1,49 @@
-/* You can add global styles to this file, and also import other style files */
-body {
-  font-family: 'Bellefair', serif;
-  background-color: #DBE3E2;
-  font-size: 20px;
+main{
+	
+	background-size: cover;
+	overflow-x: hidden;
+	height: 100%;
+  background-color: #000000;
 }
-.mealList {
-   font-family: 'Titillium Web', sans-serif;
+
+.about{
+	width:80%;
+	height: auto;
+	background-color: rgba(255, 255, 255, 0);
+	padding: 2px 20px 20px 20px;
+	margin: 10px auto;
+	border: 2px solid #ccc;
+	box-shadow: 0 0 20px grey;
+	border-radius: 10px;
+  color: #ffffff;
+  font-style: italic;
 }
-.dropdown {
-  margin-top: 10px;
-  margin-bottom: 10px;
+
+.row{
+  display: table;
+  width:80%;
+	height: 100%;
+	background-color: rgba(255, 255, 255, 0.2);
+	padding: 2px 20px 20px 20px;
+	margin: 10px auto;
+	border: 2px solid #ccc;
+	box-shadow: 0 0 20px grey;
+	border-radius: 10px;
 }
-.editBtn {
-  width: 10rem;
-  border-radius: 0;
+
+.column{
+  float: right;
+  height: 100%;
+	margin: 5px auto;
 }
-.navbar-bottom {
-  background-color: inherit;
-  text-align: center;
-  height: 15rem;
+
+.column.right{
+  width: 30%;
+	padding: 0px 20px 20px 0px;
+  border-right: 0.05px solid grey;
 }
-h1 {
-  color: black;
-  text-align: center;
-}
-.header {
-  background-color: inherit;
-  height: 10rem;
-}
-.footerName {
-  color: blue;
-  font-size: 15px;
-}
-.footRow {
-  height: 10rem;
-}
-/* Float Shadow */
-.hvr-float-shadow {
-  display: inline-block;
-  vertical-align: middle;
-  -webkit-transform: perspective(1px) translateZ(0);
-  transform: perspective(1px) translateZ(0);
-  box-shadow: 0 0 1px transparent;
-  position: relative;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-}
-.hvr-float-shadow:before {
-  pointer-events: none;
-  position: absolute;
-  z-index: -1;
-  content: '';
-  top: 100%;
-  left: 5%;
-  height: 10px;
-  width: 90%;
-  opacity: 0;
-  background: -webkit-radial-gradient(center, ellipse, rgba(0, 0, 0, 0.35) 0%, transparent 80%);
-  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.35) 0%, transparent 80%);
-  /* W3C */
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition-property: transform, opacity;
-  transition-property: transform, opacity;
-}
-.hvr-float-shadow:hover, .hvr-float-shadow:focus, .hvr-float-shadow:active {
-  -webkit-transform: translateY(-5px);
-  transform: translateY(-5px);
-  /* move the element up by 5px */
-}
-.hvr-float-shadow:hover:before, .hvr-float-shadow:focus:before, .hvr-float-shadow:active:before {
-  opacity: 1;
-  -webkit-transform: translateY(5px);
-  transform: translateY(5px);
-  /* move the element down by 5px (it will stay in place because it's attached to the element that also moves up 5px) */
-}
-.item {
-  width: 100%
+
+.column.left{
+  width: 60%;
+	padding: 0px 20px 20px 20px;
 }

@@ -1,0 +1,13 @@
+<h2>Filter Or Edit Your Meals</h2>
+<select (change)="onChange($event.target.value)">
+  <option value="all" selected="selected">Show All</option>
+  <option value="under500">Under 500 Calories</option>
+  <option value="over500">Over 500 Calories</option>
+</select>
+<div *ngFor="let currentFood of childFoodList | calories: selectedCalorieCount">
+  <h4>Meal Number: {{currentFood.id}}</h4>
+  <p>Name: {{currentFood.name}}</p>
+  <p>Details: {{currentFood.details}}</p>
+  <p>Calories: {{currentFood.calories}}</p>
+  <button (click)="editButtonClicked(currentFood)">Edit</button>
+</div>
